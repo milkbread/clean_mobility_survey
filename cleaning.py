@@ -1,7 +1,10 @@
+import logging
 import pandas as pd
 import numpy as np
 
 from geopy.geocoders import Nominatim
+
+log = logging.getLogger(__name__)
 
 location_to_clean = [
     ("Taubenheim", "Taubenheim (Klipphausen)"),
@@ -55,19 +58,22 @@ replace_counts = {
     1.0: "1",
     0.0: "",
 }
-replace_starts = {
+replace_others = {
     "Ich starte immer vom gleichen Ort aus.": "gleicher Ort",
     "Ich habe zwei Wohnorte": "zwei Wohnorte",
+    "1 (unwichtig)": "1",
+    "4 (extrem wichtig)": "4",
 }
 
 
 class Cleaning:
-    def __init__(self, filename):
-        self.filename = filename
+    def __init__(self, input_file, output_file="./data/cleaned_data.csv"):
+        self.input_file = input_file
+        self.output_file = output_file
 
         # CSV-Datei einlesen
         self.df = pd.read_csv(
-            filename,
+            input_file,
             # "export_Schueler_bereinigt.csv",
             delimiter=";",
             encoding="utf-8",
@@ -91,7 +97,7 @@ class Cleaning:
         self.df.replace(replace_counts, inplace=True)
 
         # Alle Startortangebaen durch kurze Werte ersetzen
-        self.df.replace(replace_starts, inplace=True)
+        self.df.replace(replace_others, inplace=True)
 
         # Timedelta berechnen und ausgeben
         for index, row in self.df.iterrows():
@@ -105,7 +111,7 @@ class Cleaning:
                 print(e)
 
         # Bereinigte CSV-Datei speichern
-        self.df.to_csv("data/cleaned_data.csv", index=False, sep=";", encoding="utf-8")
+        self.df.to_csv(self.output_file, index=False, sep=";", encoding="utf-8")
 
         print("Bereinigung abgeschlossen und Datei gespeichert.")
 
@@ -119,16 +125,24 @@ class Cleaning:
         for col in self.df.columns:
             if "Mein Schulweg im Sommer... HINFAHRT." in col:
                 _type = col.split("Mein Schulweg im Sommer... HINFAHRT.")[1]
-                self.df.rename(columns={col: f"Hinweg(Sommer):{_type}"}, inplace=True)
+                self.df.rename(
+                    columns={col: f"Hinweg(Sommer):{_type}"}, inplace=True
+                )
             elif "Mein Schulweg im Sommer... Rückfahrt." in col:
                 _type = col.split("Mein Schulweg im Sommer... Rückfahrt.")[1]
-                self.df.rename(columns={col: f"Rückweg(Sommer):{_type}"}, inplace=True)
+                self.df.rename(
+                    columns={col: f"Rückweg(Sommer):{_type}"}, inplace=True
+                )
             elif "Mein Schulweg im Winter... Hinfahrt." in col:
                 _type = col.split("Mein Schulweg im Winter... Hinfahrt.")[1]
-                self.df.rename(columns={col: f"Hinweg(Winter):{_type}"}, inplace=True)
+                self.df.rename(
+                    columns={col: f"Hinweg(Winter):{_type}"}, inplace=True
+                )
             elif "Mein Schulweg im Winter... Rückfahrt." in col:
                 _type = col.split("Mein Schulweg im Winter... Rückfahrt.")[1]
-                self.df.rename(columns={col: f"Rückweg(Winter):{_type}"}, inplace=True)
+                self.df.rename(
+                    columns={col: f"Rückweg(Winter):{_type}"}, inplace=True
+                )
             elif (
                 "Wie zufrieden bist Du mit dem Weg zur Schule im Hinblick auf...."
                 in col
@@ -136,7 +150,9 @@ class Cleaning:
                 _type = col.split(
                     "Wie zufrieden bist Du mit dem Weg zur Schule im Hinblick auf...."
                 )[1]
-                self.df.rename(columns={col: f"Zufriedenheit:{_type}"}, inplace=True)
+                self.df.rename(
+                    columns={col: f"Zufriedenheit:{_type}"}, inplace=True
+                )
             elif "In welchem Ort wohnst Du?" == col:
                 self.df.rename(columns={col: "Wohnort"}, inplace=True)
             elif (
@@ -150,7 +166,9 @@ class Cleaning:
     def add_duration(self):
         # Spalte "Dauer (in min)" hinzufügen, wenn nicht vorhanden
         date_format = "%d.%m.%Y %H:%M"
-        self.df["Startzeit"] = pd.to_datetime(self.df["Startzeit"], format=date_format)
+        self.df["Startzeit"] = pd.to_datetime(
+            self.df["Startzeit"], format=date_format
+        )
         self.df["Fertigstellungszeit"] = pd.to_datetime(
             self.df["Fertigstellungszeit"], format=date_format
         )
@@ -164,13 +182,15 @@ class Cleaning:
             self.df["Fertigstellungszeit"] - self.df["Startzeit"],
         )
 
-        self.df["Dauer (in min)"] = self.df["Dauer (in min)"].dt.total_seconds() / 60
+        self.df["Dauer (in min)"] = (
+            self.df["Dauer (in min)"].dt.total_seconds() / 60
+        )
 
         # reset to initial date format
         self.df["Startzeit"] = self.df["Startzeit"].dt.strftime(date_format)
-        self.df["Fertigstellungszeit"] = self.df["Fertigstellungszeit"].dt.strftime(
-            date_format
-        )
+        self.df["Fertigstellungszeit"] = self.df[
+            "Fertigstellungszeit"
+        ].dt.strftime(date_format)
 
     def clean_location(self, row, index):
         _location = row["Wohnort"]

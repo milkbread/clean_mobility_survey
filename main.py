@@ -21,21 +21,40 @@ def main(debug):
 
 
 @main.command()
-@click.option("-f", "--filename", help="name of the input file")
-def clean(filename):
-    Cleaning(filename).run()
+@click.option("-i", "--input_file", help="location of the input file")
+def clean(input_file):
+    Cleaning(input_file).run()
 
 
 @main.command()
-@click.option("-f", "--filename", help="name of the input file")
-def export_coordinates(filename):
-    Export(filename).coordinates()
+@click.option("-i", "--input_file", help="location of the input file")
+def export_coordinates(input_file):
+    Export(input_file).coordinates()
 
 
 @main.command()
-@click.option("-f", "--filename", help="name of the input file")
-def export_table(filename):
-    Export(filename).table()
+@click.option("-i", "--input_file", help="location of the input file")
+def export_table(input_file):
+    Export(input_file).table()
+
+@main.command()
+@click.option(
+    "-i", "--input_file", help="location of the input file", show_default=True,
+    default="./data/export_Schueler.csv")
+@click.option(
+    "-o", "--output_file", help="location of the output file", show_default=True,
+    default="./data/cleaned_data.csv")
+@click.option(
+    "-r", "--repeat", is_flag=True,
+    help="takes output file as input file and repeats cleaning for that"
+    )
+
+def run(input_file, output_file, repeat):
+    if repeat:
+        input_file = output_file
+    Cleaning(input_file, output_file=output_file).run()
+    Export(output_file).coordinates()
+    Export(output_file).table()
 
 
 if __name__ == "__main__":
