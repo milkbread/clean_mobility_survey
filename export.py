@@ -55,7 +55,7 @@ class Export:
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>CSV-Daten der Mobilitätesumfrage</title>
+            <title>FWS Mobilitätsumfrage</title>
             <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
