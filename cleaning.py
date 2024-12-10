@@ -112,6 +112,7 @@ class Cleaning:
 
         # Bereinigte CSV-Datei speichern
         self.df.to_csv(self.output_file, index=False, sep=";", encoding="utf-8")
+        self.df.to_csv('docs/cleaned_data.csv', index=False, sep=";", encoding="utf-8")
 
         print("Bereinigung abgeschlossen und Datei gespeichert.")
 

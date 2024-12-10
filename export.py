@@ -89,3 +89,4 @@ class Export:
         # HTML-Datei speichern
         with open("docs/table.html", "w") as f:
             f.write(html_content)
+
