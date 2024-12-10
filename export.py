@@ -40,7 +40,11 @@ class Export:
     def table(self):
         # CSV in HTML-Tabelle umwandeln
         html_table = self.df.to_html(
-            index=False, classes="display", table_id="mobility_survey"
+            index=False,
+            classes="display",
+            table_id="mobility_survey",
+            decimal=",",
+            na_rep="-",
         )
 
         # HTML-Datei erstellen

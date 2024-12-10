@@ -41,7 +41,20 @@ r_list = [
     ("13-18", (13 + 18) / 2),
 ]
 
-replace_counts = {"5x": "5", "4x": "4", "3x": "3", "2x": "2", "1x": "1", "0x": "0"}
+replace_counts = {
+    "5x": "5",
+    "4x": "4",
+    "3x": "3",
+    "2x": "2",
+    "1x": "1",
+    "0x": "",
+    5.0: "5",
+    4.0: "4",
+    3.0: "3",
+    2.0: "2",
+    1.0: "1",
+    0.0: "",
+}
 replace_starts = {
     "Ich starte immer vom gleichen Ort aus.": "gleicher Ort",
     "Ich habe zwei Wohnorte": "zwei Wohnorte",
@@ -65,20 +78,7 @@ class Cleaning:
     def run(self):
         self.clean_columns()
 
-        # Spalte "Dauer (in min)" hinzufügen, wenn nicht vorhanden
-        if "Dauer (in min)" not in self.df.columns:
-            date_format = "%d.%m.%Y %H:%M"
-            self.df["Startzeit"] = pd.to_datetime(
-                self.df["Startzeit"], format=date_format
-            ).dt.strftime(date_format)
-            self.df["Fertigstellungszeit"] = pd.to_datetime(
-                self.df["Fertigstellungszeit"], format=date_format
-            ).dt.strftime(date_format)
-
-            # Index der Spalte 'Fertigstellungszeit' herausfinden
-            col_index = self.df.columns.get_loc("Fertigstellungszeit")
-            # Neue Spalte 'Dauer' hinter 'Fertigstellungszeit' einfügen
-            self.df.insert(col_index + 1, "Dauer (in min)", "")
+        self.add_duration()
 
         # Neue Spalten 'lat' & 'lng' hinter 'Wohnort' einfügen,
         # wenn nicht vorhanden
@@ -97,10 +97,8 @@ class Cleaning:
         for index, row in self.df.iterrows():
             try:
 
-                self.df.at[index, "Alter"] = self.clean_age(row["Alter"])
-                self.df.at[index, "Schulweg (in km)"] = self.clean_distance(
-                    row["Schulweg (in km)"]
-                )
+                self.df.at[index, "Alter"] = self.clean_age(row)
+                self.df.at[index, "Schulweg (in km)"] = self.clean_distance(row)
                 self.df.at[index, "Wohnort"] = self.clean_location(row, index)
 
             except Exception as e:
@@ -113,7 +111,9 @@ class Cleaning:
 
     def clean_columns(self):
         # Spalten "E-Mail" und "Name" entfernen
-        self.df = self.df.drop(columns=["E-Mail", "Name"], errors="ignore")
+        self.df = self.df.drop(
+            columns=["E-Mail", "Name", "Dauer (in min)"], errors="ignore"
+        )
 
         # Spaltennamen umbenennen (für bessere Lesbarkeit)
         for col in self.df.columns:
@@ -147,6 +147,31 @@ class Cleaning:
             elif "Wie alt bist Du?" == col:
                 self.df.rename(columns={col: "Alter"}, inplace=True)
 
+    def add_duration(self):
+        # Spalte "Dauer (in min)" hinzufügen, wenn nicht vorhanden
+        date_format = "%d.%m.%Y %H:%M"
+        self.df["Startzeit"] = pd.to_datetime(self.df["Startzeit"], format=date_format)
+        self.df["Fertigstellungszeit"] = pd.to_datetime(
+            self.df["Fertigstellungszeit"], format=date_format
+        )
+
+        # Index der Spalte 'Fertigstellungszeit' herausfinden
+        col_index = self.df.columns.get_loc("Fertigstellungszeit")
+        # Neue Spalte 'Dauer' hinter 'Fertigstellungszeit' einfügen
+        self.df.insert(
+            col_index + 1,
+            "Dauer (in min)",
+            self.df["Fertigstellungszeit"] - self.df["Startzeit"],
+        )
+
+        self.df["Dauer (in min)"] = self.df["Dauer (in min)"].dt.total_seconds() / 60
+
+        # reset to initial date format
+        self.df["Startzeit"] = self.df["Startzeit"].dt.strftime(date_format)
+        self.df["Fertigstellungszeit"] = self.df["Fertigstellungszeit"].dt.strftime(
+            date_format
+        )
+
     def clean_location(self, row, index):
         _location = row["Wohnort"]
         # clean name
@@ -165,33 +190,32 @@ class Cleaning:
                 print(f"Location not found for {_location}")
         return _location
 
-    def clean_distance(self, distance_):
-        if isinstance(distance_, str):
-            _distance = distance_
-            _distance = _distance.strip()
-            _distance = _distance.lower().strip("km").replace("km", "")
-            _distance = _distance.lower().strip("meter")
-            _distance = _distance.lower().strip("  (luftlinie)")
-            _distance = _distance.lower().strip("ca.")
-            _distance = _distance.lower().strip("kilo")
-            _distance = _distance.lower().strip("kilm")
-            _distance = _distance.lower().strip("luftlin")
-            _distance = _distance.replace(",", ".")
-            _distance = _distance.lstrip().rstrip()
+    def clean_distance(self, row):
+        distance_ = str(row["Schulweg (in km)"])
+        _distance = distance_
+        _distance = _distance.strip()
+        _distance = _distance.lower().strip("km").replace("km", "")
+        _distance = _distance.lower().strip("meter")
+        _distance = _distance.lower().strip("  (luftlinie)")
+        _distance = _distance.lower().strip("ca.")
+        _distance = _distance.lower().strip("kilo")
+        _distance = _distance.lower().strip("kilm")
+        _distance = _distance.lower().strip("luftlin")
+        _distance = _distance.replace(",", ".")
+        _distance = _distance.lstrip().rstrip()
 
-            for r in r_list:
-                if r[0] in _distance:
-                    _distance = _distance.replace(r[0], str(r[1]))
+        for r in r_list:
+            if r[0] in _distance:
+                _distance = _distance.replace(r[0], str(r[1]))
 
-            distance = float(_distance)
-            if distance > 100:
-                distance = distance / 1000
-            if distance > 100:
-                print(_distance, distance_)
-            return distance
-        return distance_
+        distance = float(_distance)
+        if distance > 100:
+            distance = distance / 1000
 
-    def clean_age(self, _age):
+        return round(distance, 2)
+
+    def clean_age(self, row):
+        _age = row["Alter"]
         if isinstance(_age, str):
             _age = _age.strip()
             _age = _age.strip("+")
