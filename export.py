@@ -33,6 +33,6 @@ class Coordinates:
         geojson = {"type": "FeatureCollection", "features": features}
 
         # GeoJSON-Datei speichern
-        with open("pages/coordinates.geojson", "w") as f:
+        with open("docs/coordinates.geojson", "w") as f:
             f.write("const geojson = ")
             json.dump(geojson, f)
