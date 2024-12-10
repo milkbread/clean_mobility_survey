@@ -21,6 +21,8 @@ location_to_clean = [
     ("Bahra gemeinde hirstein", "Bahra gemeinde hirschstein"),
     ("Meißen Mölln", "Meißen-Cölln"),
     ("Dira-zeren", "Diera-Zehren"),
+    ("Luga", "Luga (Käbschütztal)"),
+    ("1662", "Meißen"),
 ]
 
 r_list = [
