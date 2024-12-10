@@ -46,6 +46,13 @@ def export_wordcloud(input_file):
 
 @main.command()
 @click.option(
+    "-i", "--input_file", help="location of the input file",
+    show_default=True, default="./data/cleaned_data.csv")
+def unique_locations(input_file):
+    Export(input_file).unique_locations()
+
+@main.command()
+@click.option(
     "-i", "--input_file", help="location of the input file", show_default=True,
     default="./data/export_Schueler.csv")
 @click.option(
@@ -63,6 +70,7 @@ def run(input_file, output_file, repeat):
     Export(output_file).coordinates()
     Export(output_file).table()
     Export(output_file).wordcloud()
+    Export(output_file).unique_locations()
 
 
 if __name__ == "__main__":

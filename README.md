@@ -86,7 +86,7 @@ Das Skript [main.py](main.py) bietet verschiedene Befehle zur Bereinigung und zu
 - [Bootstrap](https://getbootstrap.com/)
 - [Wordcloud](https://github.com/amueller/word_cloud)
 - [Matplotlib](https://matplotlib.org)
-- [Natural Language Toolkit](https://www.nltk.org)
+- [Natural Language ToolkitNatural Language Toolkit](https://www.nltk.org)
 
 ## Lizenz
 

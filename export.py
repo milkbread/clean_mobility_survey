@@ -116,3 +116,17 @@ class Export:
         plt.figure(figsize=(10, 5))
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.axis('off')
+
+    def unique_locations(self):
+        # Eindeutige Wohnorte extrahieren
+        unique_locations = self.df.dropna(subset=['Wohnort', 'lat'])
+        unique_locations = self.df['Wohnort'].dropna().apply(lambda x: x.rstrip()).unique()
+
+        # DataFrame mit eindeutigen Wohnorten erstellen
+        unique_locations_df = pd.DataFrame(unique_locations, columns=['Wohnort'])
+
+        unique_locations_df = unique_locations_df.sort_values(by='Wohnort')
+        unique_locations_df.insert(1, "Cluster", "")
+
+        # Neue CSV-Datei speichern
+        unique_locations_df.to_csv('data/unique_locations.csv', index=False, sep=';')

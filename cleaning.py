@@ -16,6 +16,7 @@ location_to_clean = [
     ("röhrdorf", "Röhrsdorf (Klipphausen)"),
     ("Lommatsch", "Lommatzsch"),
     ("stroichen", "Stroischen"),
+    ("01689 Weinböhla", "Weinböhla"),
     ("Ortsteil von Lommatzsch", "Lommatzsch"),
     ("Nossen OT Gruna", "Gruna (Nossen)"),
     ("Niderjahna", "Niederjahna"),
@@ -26,7 +27,21 @@ location_to_clean = [
     ("Dira-zeren", "Diera-Zehren"),
     ("Luga", "Luga (Käbschütztal)"),
     ("1662", "Meißen"),
+    ("MEIßEN", "Meißen"),
+    ("Meissen", "Meißen"),
+    ("Meißen Cölln", "Cölln (Meißen)"),
+    ("Meißen-Cölln", "Cölln (Meißen)"),
+    ("meißen talstraße 80b", "Meißen"),
+    ("Grossdobritz", "Großdobritz"),
+    ("großdobritz", "Großdobritz"),
+    ("Bahra gemeinde hirschstein", "Bahra Hirschstein"),
+    ("An der Telle Meißen", "Meißen"),
 ]
+
+def capitalize_first_letter(word):
+    if word and word[0].islower():
+        return word[0].upper() + word[1:]
+    return word
 
 r_list = [
     ("15 min. ", ""),
@@ -196,6 +211,9 @@ class Cleaning:
     def clean_location(self, row, index):
         _location = row["Wohnort"]
         # clean name
+
+        _location = capitalize_first_letter(_location)
+
         for loc in location_to_clean:
             if loc[0] in _location:
                 _location = loc[1]
