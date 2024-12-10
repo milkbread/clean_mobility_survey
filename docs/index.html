@@ -1,91 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
-    <title>Leaflet Map</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        #map {
-            height: 100%;
-            width: 100%;
-        }
-
-        #toggleButton {
-            position: absolute;
-            top: 10px;
-            left: 52px;
-            z-index: 1000;
-            background: white;
-            padding: 10px;
-            border: 2px solid #ccc;
-            cursor: pointer;
-        }
-    </style>
+    <title>Index</title>
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div id="toggleButton">Clustering ein-/ausschalten</div>
-    <div id="map"></div>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-    <script src="coordinates.geojson"></script>
-    <script>
-        var map = L.map('map').setView([51.1657, 13.4515], 10);
-
-        L.tileLayer('https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | ' +
-                'Tiles courtesy of <a href="https://memomaps.de/">MeMoMaps</a>'
-        }).addTo(map);
-
-        var markers = L.markerClusterGroup();
-        var geoJsonLayer = L.geoJSON(geojson, {
-            onEachFeature: function (feature, layer) {
-                layer.bindPopup(feature.properties.Wohnort);
-            }
-        });
-
-        markers.addLayer(geoJsonLayer);
-        geoJsonLayer.addTo(map);
-
-        addGeojsonLayer = function (geojson) {
-            geoJsonLayer.eachLayer(function (layer) {
-                var count = 0;
-                geoJsonLayer.eachLayer(function (innerLayer) {
-                    if (layer.getLatLng().equals(innerLayer.getLatLng())) {
-                        count++;
-                    }
-                });
-                if (count > 1) {
-                    layer.bindPopup(layer.feature.properties.Wohnort + " (" + count + " Punkte)");
-                }
-            });
-            geoJsonLayer.addTo(map);
-        }
-
-        var clusteringEnabled = false;
-        addGeojsonLayer()
-
-        document.getElementById('toggleButton').onclick = function () {
-            if (clusteringEnabled) {
-                map.removeLayer(markers);
-                addGeojsonLayer();
-            } else {
-                map.removeLayer(geoJsonLayer);
-                map.addLayer(markers);
-            }
-            clusteringEnabled = !clusteringEnabled;
-        };
-    </script>
+    <div class="container mt-5">
+        <h1 class="text-center">FWS Mobilitätsumfrage</h1>
+        <p class="text-center">Wählen Sie eine der folgenden Optionen:</p>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Karte</h5>
+                        <p class="card-text">Karte der Startorte.</p>
+                        <a href="map.html" class="btn btn-primary">Zur Karte</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tabelle</h5>
+                        <p class="card-text">Gereinigte Daten als Tabelle.</p>
+                        <a href="table.html" class="btn btn-primary">Zur Tabelle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

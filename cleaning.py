@@ -41,6 +41,12 @@ r_list = [
     ("13-18", (13 + 18) / 2),
 ]
 
+replace_counts = {"5x": "5", "4x": "4", "3x": "3", "2x": "2", "1x": "1", "0x": "0"}
+replace_starts = {
+    "Ich starte immer vom gleichen Ort aus.": "gleicher Ort",
+    "Ich habe zwei Wohnorte": "zwei Wohnorte",
+}
+
 
 class Cleaning:
     def __init__(self, filename):
@@ -57,21 +63,72 @@ class Cleaning:
         self.app = Nominatim(user_agent="cleaning")
 
     def run(self):
-        df = self.df
+        self.clean_columns()
+
+        # Spalte "Dauer (in min)" hinzufügen, wenn nicht vorhanden
+        if "Dauer (in min)" not in self.df.columns:
+            date_format = "%d.%m.%Y %H:%M"
+            self.df["Startzeit"] = pd.to_datetime(
+                self.df["Startzeit"], format=date_format
+            ).dt.strftime(date_format)
+            self.df["Fertigstellungszeit"] = pd.to_datetime(
+                self.df["Fertigstellungszeit"], format=date_format
+            ).dt.strftime(date_format)
+
+            # Index der Spalte 'Fertigstellungszeit' herausfinden
+            col_index = self.df.columns.get_loc("Fertigstellungszeit")
+            # Neue Spalte 'Dauer' hinter 'Fertigstellungszeit' einfügen
+            self.df.insert(col_index + 1, "Dauer (in min)", "")
+
+        # Neue Spalten 'lat' & 'lng' hinter 'Wohnort' einfügen,
+        # wenn nicht vorhanden
+        if "lat" not in self.df.columns:
+            col_index = self.df.columns.get_loc("Wohnort")
+            self.df.insert(col_index + 1, "lat", "")
+            self.df.insert(col_index + 1, "lng", "")
+
+        # Alle *x-Werte durch Zahlen ersetzen (z.B. 5x -> 5)
+        self.df.replace(replace_counts, inplace=True)
+
+        # Alle Startortangebaen durch kurze Werte ersetzen
+        self.df.replace(replace_starts, inplace=True)
+
+        # Timedelta berechnen und ausgeben
+        for index, row in self.df.iterrows():
+            try:
+
+                self.df.at[index, "Alter"] = self.clean_age(row["Alter"])
+                self.df.at[index, "Schulweg (in km)"] = self.clean_distance(
+                    row["Schulweg (in km)"]
+                )
+                self.df.at[index, "Wohnort"] = self.clean_location(row, index)
+
+            except Exception as e:
+                print(e)
+
+        # Bereinigte CSV-Datei speichern
+        self.df.to_csv("data/cleaned_data.csv", index=False, sep=";", encoding="utf-8")
+
+        print("Bereinigung abgeschlossen und Datei gespeichert.")
+
+    def clean_columns(self):
+        # Spalten "E-Mail" und "Name" entfernen
+        self.df = self.df.drop(columns=["E-Mail", "Name"], errors="ignore")
+
         # Spaltennamen umbenennen (für bessere Lesbarkeit)
-        for col in df.columns:
+        for col in self.df.columns:
             if "Mein Schulweg im Sommer... HINFAHRT." in col:
                 _type = col.split("Mein Schulweg im Sommer... HINFAHRT.")[1]
-                df.rename(columns={col: f"Hinweg(Sommer):{_type}"}, inplace=True)
+                self.df.rename(columns={col: f"Hinweg(Sommer):{_type}"}, inplace=True)
             elif "Mein Schulweg im Sommer... Rückfahrt." in col:
                 _type = col.split("Mein Schulweg im Sommer... Rückfahrt.")[1]
-                df.rename(columns={col: f"Rückweg(Sommer):{_type}"}, inplace=True)
+                self.df.rename(columns={col: f"Rückweg(Sommer):{_type}"}, inplace=True)
             elif "Mein Schulweg im Winter... Hinfahrt." in col:
                 _type = col.split("Mein Schulweg im Winter... Hinfahrt.")[1]
-                df.rename(columns={col: f"Hinweg(Winter):{_type}"}, inplace=True)
+                self.df.rename(columns={col: f"Hinweg(Winter):{_type}"}, inplace=True)
             elif "Mein Schulweg im Winter... Rückfahrt." in col:
                 _type = col.split("Mein Schulweg im Winter... Rückfahrt.")[1]
-                df.rename(columns={col: f"Rückweg(Winter):{_type}"}, inplace=True)
+                self.df.rename(columns={col: f"Rückweg(Winter):{_type}"}, inplace=True)
             elif (
                 "Wie zufrieden bist Du mit dem Weg zur Schule im Hinblick auf...."
                 in col
@@ -79,56 +136,16 @@ class Cleaning:
                 _type = col.split(
                     "Wie zufrieden bist Du mit dem Weg zur Schule im Hinblick auf...."
                 )[1]
-                df.rename(columns={col: f"Zufriedenheit:{_type}"}, inplace=True)
+                self.df.rename(columns={col: f"Zufriedenheit:{_type}"}, inplace=True)
             elif "In welchem Ort wohnst Du?" == col:
-                df.rename(columns={col: "Wohnort"}, inplace=True)
+                self.df.rename(columns={col: "Wohnort"}, inplace=True)
             elif (
                 "Wie lang ist Dein Weg zur Schule (einfache Strecke) in Kilometern?"
                 == col
             ):
-                df.rename(columns={col: "Schulweg (in km)"}, inplace=True)
-            # else:
-            #     print(col)
-
-        if "Dauer (in min)" not in df.columns:
-            date_format = "%d.%m.%Y %H:%M"
-            df["Startzeit"] = pd.to_datetime(
-                df["Startzeit"], format=date_format
-            ).dt.strftime(date_format)
-            df["Fertigstellungszeit"] = pd.to_datetime(
-                df["Fertigstellungszeit"], format=date_format
-            ).dt.strftime(date_format)
-
-            # Index der Spalte 'Fertigstellungszeit' herausfinden
-            col_index = df.columns.get_loc("Fertigstellungszeit")
-            # Neue Spalte 'Dauer' hinter 'Fertigstellungszeit' einfügen
-            df.insert(col_index + 1, "Dauer (in min)", "")
-
-        if "lat" not in df.columns:
-            # Neue Spalte 'location' hinter 'Wohnort' einfügen
-            col_index = df.columns.get_loc("Wohnort")
-            df.insert(col_index + 1, "lat", "")
-            df.insert(col_index + 1, "lng", "")
-
-        # Timedelta berechnen und ausgeben
-        for index, row in df.iterrows():
-            try:
-
-                df.at[index, "Wie alt bist Du?"] = self.clean_age(
-                    row["Wie alt bist Du?"]
-                )
-                df.at[index, "Schulweg (in km)"] = self.clean_distance(
-                    row["Schulweg (in km)"]
-                )
-                df.at[index, "Wohnort"] = self.clean_location(row, index)
-
-            except Exception as e:
-                print(e)
-
-        # Bereinigte CSV-Datei speichern
-        df.to_csv("data/cleaned_data.csv", index=False, sep=";", encoding="utf-8")
-
-        print("Bereinigung abgeschlossen und Datei gespeichert.")
+                self.df.rename(columns={col: "Schulweg (in km)"}, inplace=True)
+            elif "Wie alt bist Du?" == col:
+                self.df.rename(columns={col: "Alter"}, inplace=True)
 
     def clean_location(self, row, index):
         _location = row["Wohnort"]

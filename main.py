@@ -2,7 +2,7 @@ import logging
 import click
 
 from cleaning import Cleaning
-from export import Coordinates
+from export import Export
 
 log = logging.getLogger(__name__)
 
@@ -29,7 +29,13 @@ def clean(filename):
 @main.command()
 @click.option("-f", "--filename", help="name of the input file")
 def export_coordinates(filename):
-    Coordinates(filename).run()
+    Export(filename).coordinates()
+
+
+@main.command()
+@click.option("-f", "--filename", help="name of the input file")
+def export_table(filename):
+    Export(filename).table()
 
 
 if __name__ == "__main__":
