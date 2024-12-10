@@ -44,22 +44,27 @@ Das Skript [main.py](main.py) bietet verschiedene Befehle zur Bereinigung und zu
 
 1. **clean**: Bereinigt die Daten.
     ```sh
-    python main.py clean -i <input_file>
+    python3 main.py clean -i <input_file>
     ```
 
-2. **export_coordinates**: Exportiert die Koordinaten als GeoJSON.
+2. **export coordinates**: Exportiert die Koordinaten als GeoJSON.
     ```sh
-    python main.py export_coordinates -i <input_file>
+    python3 main.py export-coordinates -i <input_file>
     ```
 
-3. **export_table**: Exportiert die Daten als HTML-Tabelle.
+3. **export table**: Exportiert die Daten als HTML-Tabelle.
     ```sh
-    python main.py export_table -i <input_file>
+    python3 main.py export-table -i <input_file>
     ```
 
-4. **run**: Führt die Bereinigung und den Export der Daten durch.
+4. **export wordcloud**: Führt die Bereinigung und den Export der Daten durch.
     ```sh
-    python main.py run -i <input_file> -o <output_file> [--repeat]
+    python3 main.py export-wordcloud -i <input_file>
+    ```
+
+5. **run**: Führt die Bereinigung und den Export der Daten durch.
+    ```sh
+    python3 main.py run -i <input_file> -o <output_file> [--repeat]
     ```
 
 ## Dateien
@@ -79,6 +84,9 @@ Das Skript [main.py](main.py) bietet verschiedene Befehle zur Bereinigung und zu
 - [Leaflet](https://leafletjs.com/)
 - [DataTables](https://datatables.net/)
 - [Bootstrap](https://getbootstrap.com/)
+- [Wordcloud](https://github.com/amueller/word_cloud)
+- [Matplotlib](https://matplotlib.org)
+- [Natural Language Toolkit](https://www.nltk.org)
 
 ## Lizenz
 

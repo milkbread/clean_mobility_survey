@@ -39,6 +39,13 @@ def export_table(input_file):
 
 @main.command()
 @click.option(
+    "-i", "--input_file", help="location of the input file",
+    show_default=True, default="./data/cleaned_data.csv")
+def export_wordcloud(input_file):
+    Export(input_file).wordcloud()
+
+@main.command()
+@click.option(
     "-i", "--input_file", help="location of the input file", show_default=True,
     default="./data/export_Schueler.csv")
 @click.option(
@@ -55,6 +62,7 @@ def run(input_file, output_file, repeat):
     Cleaning(input_file, output_file=output_file).run()
     Export(output_file).coordinates()
     Export(output_file).table()
+    Export(output_file).wordcloud()
 
 
 if __name__ == "__main__":

@@ -1,7 +1,14 @@
 import logging
-import pandas as pd
-import numpy as np
 import json
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+import nltk
+from nltk.corpus import stopwords
+
+from wordcloud import WordCloud
+
 log = logging.getLogger(__name__)
 
 class Export:
@@ -90,3 +97,22 @@ class Export:
         with open("docs/table.html", "w") as f:
             f.write(html_content)
 
+    def wordcloud(self):
+
+        nltk.download('stopwords')
+        # Text aus der Spalte "Was ich sonst noch hinzufügen möchte (Anregungen und Anmerkungen)" extrahieren
+        text = ' '.join(self.df['Was ich sonst noch hinzufügen möchte (Anregungen und Anmerkungen)'].dropna().astype(str))
+
+        # Stopwords definieren
+        stop_words = set(stopwords.words('german'))
+
+        # Wordcloud generieren
+        wordcloud = WordCloud(width=800, height=400, background_color='white', stopwords=stop_words).generate(text)
+
+        # Wordcloud als Bild speichern
+        wordcloud.to_file('docs/wordcloud.png')
+
+        # Optional: Wordcloud anzeigen
+        plt.figure(figsize=(10, 5))
+        plt.imshow(wordcloud, interpolation='bilinear')
+        plt.axis('off')

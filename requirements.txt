@@ -2,3 +2,6 @@ click
 numpy
 pandas
 geopy
+matplotlib
+wordcloud
+nltk
