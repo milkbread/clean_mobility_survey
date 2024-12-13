@@ -20,57 +20,55 @@ def main(debug):
     logging.getLogger("").setLevel(log_level)
 
 
-@main.command()
-@click.option("-i", "--input_file", help="location of the input file")
-def clean(input_file):
-    Cleaning(input_file).run()
+# @main.command()
+# @click.option("-i", "--input_file", help="location of the input file")
+# def clean(input_file):
+#     Cleaning(input_file).run()
 
 
-@main.command()
-@click.option("-i", "--input_file", help="location of the input file")
-def export_coordinates(input_file):
-    Export(input_file).coordinates()
+# @main.command()
+# @click.option("-i", "--input_file", help="location of the input file")
+# def export_coordinates(input_file):
+#     Export(input_file).coordinates()
 
 
-@main.command()
-@click.option("-i", "--input_file", help="location of the input file")
-def export_table(input_file):
-    Export(input_file).table()
+# @main.command()
+# @click.option("-i", "--input_file", help="location of the input file")
+# def export_table(input_file):
+#     Export(input_file).table()
 
-@main.command()
-@click.option(
-    "-i", "--input_file", help="location of the input file",
-    show_default=True, default="./data/cleaned_data.csv")
-def export_wordcloud(input_file):
-    Export(input_file).wordcloud()
+# @main.command()
+# @click.option(
+#     "-i", "--input_file", help="location of the input file",
+#     show_default=True, default="./data/cleaned_data.csv")
+# def export_wordcloud(input_file):
+#     Export(input_file).wordcloud()
 
-@main.command()
-@click.option(
-    "-i", "--input_file", help="location of the input file",
-    show_default=True, default="./data/cleaned_data.csv")
-def unique_locations(input_file):
-    Export(input_file).unique_locations()
+# @main.command()
+# @click.option(
+#     "-i", "--input_file", help="location of the input file",
+#     show_default=True, default="./data/cleaned_data.csv")
+# def unique_locations(input_file):
+#     Export(input_file).unique_locations()
 
 @main.command()
 @click.option(
     "-i", "--input_file", help="location of the input file", show_default=True,
     default="./data/export_Schueler.csv")
 @click.option(
-    "-o", "--output_file", help="location of the output file", show_default=True,
-    default="./data/cleaned_data.csv")
-@click.option(
     "-r", "--repeat", is_flag=True,
     help="takes output file as input file and repeats cleaning for that"
     )
-
-def run(input_file, output_file, repeat):
-    if repeat:
-        input_file = output_file
-    Cleaning(input_file, output_file=output_file).run()
-    Export(output_file).coordinates()
-    Export(output_file).table()
-    Export(output_file).wordcloud()
-    Export(output_file).unique_locations()
+@click.option('-t', '--type', default='pupils',
+    help="Set the type of the survey",
+    type=click.Choice(['pupils', 'parents'], case_sensitive=False))
+def run(input_file, repeat, type):
+    output_file = Cleaning(input_file, type=type, repeat=repeat).run()
+    export = Export(output_file, type=type)
+    export.coordinates()
+    export.table()
+    export.wordcloud()
+    export.unique_locations()
 
 
 if __name__ == "__main__":

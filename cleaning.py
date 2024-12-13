@@ -16,6 +16,7 @@ location_to_clean = [
     ("röhrdorf", "Röhrsdorf (Klipphausen)"),
     ("Lommatsch", "Lommatzsch"),
     ("stroichen", "Stroischen"),
+    ("Stroichen", "Stroischen"),
     ("01689 Weinböhla", "Weinböhla"),
     ("Ortsteil von Lommatzsch", "Lommatzsch"),
     ("Nossen OT Gruna", "Gruna (Nossen)"),
@@ -37,6 +38,7 @@ location_to_clean = [
     ("Bahra gemeinde hirschstein", "Bahra Hirschstein"),
     ("An der Telle Meißen", "Meißen"),
     ("Diera-Zehren, OT Kleinzadel", "Kleinzadel"),
+    ("Jessen", "Jessen (Niederau)"),
 ]
 
 def capitalize_first_letter(word):
@@ -83,17 +85,16 @@ replace_others = {
 
 
 class Cleaning:
-    def __init__(self, input_file, output_file="./data/cleaned_data.csv"):
+    def __init__(
+        self, input_file, type="pupils", repeat=False):
         self.input_file = input_file
-        self.output_file = output_file
+        self.output_file = f'docs/cleaned_data-{type}.csv'
+        if repeat:
+            self.input_file = self.output_file
+        print(self.input_file)
 
         # CSV-Datei einlesen
-        self.df = pd.read_csv(
-            input_file,
-            # "export_Schueler_bereinigt.csv",
-            delimiter=";",
-            encoding="utf-8",
-        )
+        self.df = pd.read_csv(self.input_file, delimiter=";", encoding="utf-8")
 
         self.app = Nominatim(user_agent="cleaning")
 
@@ -128,10 +129,12 @@ class Cleaning:
                 print(e)
 
         # Bereinigte CSV-Datei speichern
-        self.df.to_csv(self.output_file, index=False, sep=";", encoding="utf-8")
-        self.df.to_csv('docs/cleaned_data.csv', index=False, sep=";", encoding="utf-8")
+        # self.df.to_csv(self.output_file, index=False, sep=";", encoding="utf-8")
+        self.df.to_csv(
+            self.output_file, index=False, sep=";", encoding="utf-8")
 
-        print("Bereinigung abgeschlossen und Datei gespeichert.")
+        print(f"Cleaning completed and file saved to {self.output_file}")
+        return self.output_file
 
     def clean_columns(self):
         # Spalten "E-Mail" und "Name" entfernen
@@ -226,6 +229,7 @@ class Cleaning:
         if (row["lat"] == "" and row["lng"] == "") or (
             np.isnan(row["lat"]) or np.isnan(row["lng"])
         ):
+            print(f"Geocoding for {_location}")
             location = self.app.geocode(_location)
             if location:
                 self.df.at[index, "lat"] = location.raw["lat"]

@@ -12,8 +12,9 @@ from wordcloud import WordCloud
 log = logging.getLogger(__name__)
 
 class Export:
-    def __init__(self, filename):
+    def __init__(self, filename, type="pupils"):
         self.filename = filename
+        self.type = type
 
         # CSV-Datei einlesen
         self.df = pd.read_csv(
@@ -41,7 +42,7 @@ class Export:
         geojson = {"type": "FeatureCollection", "features": features}
 
         # GeoJSON-Datei speichern
-        with open("docs/coordinates.geojson", "w") as f:
+        with open(f"docs/coordinates-{self.type}.geojson", "w") as f:
             f.write("const geojson = ")
             json.dump(geojson, f)
 
@@ -94,7 +95,7 @@ class Export:
         """
 
         # HTML-Datei speichern
-        with open("docs/table.html", "w") as f:
+        with open(f"docs/table-{self.type}.html", "w") as f:
             f.write(html_content)
 
     def wordcloud(self):
@@ -110,7 +111,7 @@ class Export:
         wordcloud = WordCloud(width=800, height=400, background_color='white', stopwords=stop_words).generate(text)
 
         # Wordcloud als Bild speichern
-        wordcloud.to_file('docs/wordcloud.png')
+        wordcloud.to_file(f'docs/wordcloud-{self.type}.png')
 
         # Optional: Wordcloud anzeigen
         plt.figure(figsize=(10, 5))
@@ -129,4 +130,4 @@ class Export:
         unique_locations_df.insert(1, "Cluster", "")
 
         # Neue CSV-Datei speichern
-        unique_locations_df.to_csv('data/unique_locations.csv', index=False, sep=';')
+        unique_locations_df.to_csv(f'data/unique_locations-{self.type}.csv', index=False, sep=';')
