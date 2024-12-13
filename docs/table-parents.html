@@ -1,0 +1,3317 @@
+
+        <!DOCTYPE html>
+        <html lang="de">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>FWS Mobilitätsumfrage</title>
+            <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+            <style>
+                body, html {
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+                .dataTables_wrapper {
+                    height: 100vh;
+                    overflow-y: auto;
+                }
+                table#mobility_survey {
+                    width: 100%;
+                }
+            </style>
+            <script>
+                $(document).ready(function() {
+                    table = new DataTable('#mobility_survey');
+
+                });
+            </script>
+        </head>
+        <body>
+            <table border="1" class="dataframe display" id="mobility_survey">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Startzeit</th>
+      <th>Fertigstellungszeit</th>
+      <th>Dauer (in min)</th>
+      <th>Alter des Kindes</th>
+      <th>Startort für den Schulweg</th>
+      <th>Schulweg (in km)</th>
+      <th>Wohnort</th>
+      <th>lng</th>
+      <th>lat</th>
+      <th>Fahrgemeinschaften</th>
+      <th>Zufriedenheit:Wegbeschaffenheit</th>
+      <th>Zufriedenheit:Sicherheit</th>
+      <th>Zufriedenheit:Zeitdauer</th>
+      <th>Zufriedenheit:Komfortabilität</th>
+      <th>Zufriedenheit:Sozialer Zusammenhalt</th>
+      <th>Zufriedenheit:Wegbeschaffenheit.1</th>
+      <th>Zufriedenheit:Sicherheit.1</th>
+      <th>Zufriedenheit:Zeitdauer.1</th>
+      <th>Zufriedenheit:Komfortabilität.1</th>
+      <th>Zufriedenheit:Sozialer Zusammenhalt.1</th>
+      <th>Wenn Du mit dem Auto zur Schule fährst - was sind die Gründe dafür?</th>
+      <th>Wie wichtig ist Dir eine umweltverträgliche Form des Schulweges?</th>
+      <th>Kannst Du Dir vorstellen, vom Auto auf eine andere Verkehrsart umzusteigen - wenn ja auf welche?</th>
+      <th>Was ich sonst noch hinzufügen möchte (Anregungen und Anmerkungen)</th>
+      <th>Wenn Du möchtest - gib bitte Deinen Namen an, damit wir mit Dir ins Gespräch kommen können.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>11.09.2024 09:46</td>
+      <td>11.09.2024 09:49</td>
+      <td>3,0</td>
+      <td>Klasse 7-10;Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>17,00</td>
+      <td>Nossen</td>
+      <td>13,314546</td>
+      <td>51,154256</td>
+      <td>Ja</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Verfügbarkeit von Alternativen;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>4</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>11.09.2024 09:47</td>
+      <td>11.09.2024 09:49</td>
+      <td>2,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>14,00</td>
+      <td>Radebeul</td>
+      <td>13,676799</td>
+      <td>51,099976</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>11.09.2024 09:48</td>
+      <td>11.09.2024 09:50</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>4</td>
+      <td>Zu Fuß;Fahrrad;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>11.09.2024 09:52</td>
+      <td>11.09.2024 09:55</td>
+      <td>3,0</td>
+      <td>Klasse 7-10;Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>18,00</td>
+      <td>Wauden</td>
+      <td>13,273263</td>
+      <td>51,176698</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Tagesablauf;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>3</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>11.09.2024 10:15</td>
+      <td>11.09.2024 10:18</td>
+      <td>3,0</td>
+      <td>JG 1-2;JG 5-6;Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>25,00</td>
+      <td>Nossen</td>
+      <td>13,314546</td>
+      <td>51,154256</td>
+      <td>Ja</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Verfügbarkeit von Alternativen;Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>2</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>Radwege und ÖPNV muss dringend im ländlichen Raum ausgebaut werden.</td>
+      <td>familie</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>11.09.2024 10:20</td>
+      <td>11.09.2024 10:22</td>
+      <td>2,0</td>
+      <td>JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>14,00</td>
+      <td>Lommatzsch</td>
+      <td>13,311156</td>
+      <td>51,195259</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>2</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>Neline Ebert</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>11.09.2024 10:24</td>
+      <td>11.09.2024 10:26</td>
+      <td>2,0</td>
+      <td>JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Priestewitz</td>
+      <td>13,509385</td>
+      <td>51,253541</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>11.09.2024 10:30</td>
+      <td>11.09.2024 10:32</td>
+      <td>2,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>26,00</td>
+      <td>Radebeul</td>
+      <td>13,676799</td>
+      <td>51,099976</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Fahrrad;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>11.09.2024 10:47</td>
+      <td>11.09.2024 10:50</td>
+      <td>3,0</td>
+      <td>JG 3-4;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>11.09.2024 10:50</td>
+      <td>11.09.2024 10:52</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>8,00</td>
+      <td>Robschütz</td>
+      <td>13,423229</td>
+      <td>51,123594</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;Fehlende oder unsichere Radwege;</td>
+      <td>3</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>11.09.2024 10:56</td>
+      <td>11.09.2024 10:58</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>10,00</td>
+      <td>Klipphausen</td>
+      <td>13,529355</td>
+      <td>51,074957</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Verfügbarkeit von Alternativen;Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;</td>
+      <td>3</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>11.09.2024 11:19</td>
+      <td>11.09.2024 11:22</td>
+      <td>3,0</td>
+      <td>Klasse 7-10;Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Susanne Jacob-Lehmann</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>11.09.2024 11:25</td>
+      <td>11.09.2024 11:31</td>
+      <td>6,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>21,00</td>
+      <td>Nossen</td>
+      <td>13,314546</td>
+      <td>51,154256</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Zeit/ Zeitersparnis;Bequemlichkeit;</td>
+      <td>1 (unwichtig)</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Durch die veränderte Unterrichtszeit ist die Wartezeit auf den nächsten Bus teilweise sehr lang (&gt;1h).</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>11.09.2024 11:51</td>
+      <td>11.09.2024 11:54</td>
+      <td>3,0</td>
+      <td>Klasse 7-10;</td>
+      <td>zwei Wohnorte</td>
+      <td>12,00</td>
+      <td>Pinkowitz</td>
+      <td>13,547614</td>
+      <td>51,105054</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zeit/ Zeitersparnis;Möglichkeit, mehrere eigene Kinder zu fahren;Bequemlichkeit;</td>
+      <td>2</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>11.09.2024 11:56</td>
+      <td>11.09.2024 12:05</td>
+      <td>9,0</td>
+      <td>JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>Fahrrad;Zu Fuß;</td>
+      <td>-</td>
+      <td>Anne Griesel</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>11.09.2024 12:12</td>
+      <td>11.09.2024 12:14</td>
+      <td>2,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>8,00</td>
+      <td>Weinböhla</td>
+      <td>13,564353</td>
+      <td>51,161894</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>Wir fahren elektrisch und 70% kommt vom eigenen Dach</td>
+      <td>Stephan Bissinger</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>11.09.2024 12:17</td>
+      <td>11.09.2024 12:19</td>
+      <td>2,0</td>
+      <td>JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>8,00</td>
+      <td>Zehren</td>
+      <td>13,404441</td>
+      <td>51,199078</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>11.09.2024 12:20</td>
+      <td>11.09.2024 12:22</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>10,00</td>
+      <td>Weinböhla</td>
+      <td>13,564353</td>
+      <td>51,161894</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, Fahrgemeinschaften zu bilden;</td>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>11.09.2024 12:40</td>
+      <td>11.09.2024 12:42</td>
+      <td>2,0</td>
+      <td>JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>11.09.2024 13:25</td>
+      <td>11.09.2024 13:31</td>
+      <td>6,0</td>
+      <td>JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>3</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Bei den Überlegungen zu einem umweltfreundlichen Schulweg sollte der Begriff "umweltfreundlich" etwas näher definiert werden, um besser zu differenzieren. Auch ist dabei die Unterrichtsgestaltung ein beeinflussendes Element - Ausfälle, Schulfreie Tage, Nachmittagsbeschäftigungen, ...</td>
+      <td>Ulf Quaas</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>11.09.2024 14:13</td>
+      <td>11.09.2024 14:17</td>
+      <td>4,0</td>
+      <td>JG 5-6;Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>10,00</td>
+      <td>Ullendorf</td>
+      <td>13,484608</td>
+      <td>51,107198</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Verfügbarkeit von Alternativen;Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>3</td>
+      <td>-</td>
+      <td>Das schlecht bis gar nicht ausgebaute Fahrradwegenetz und die teils ungenügenden ÖPNV-Verbindungen sind die größten Hemmnisse auf das Auto zu verzichten.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>11.09.2024 16:06</td>
+      <td>11.09.2024 16:07</td>
+      <td>1,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Fahrrad;Zu Fuß;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>11.09.2024 16:08</td>
+      <td>11.09.2024 16:09</td>
+      <td>1,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Fahrrad;Zu Fuß;</td>
+      <td>Ein Radweg auf der Zscheilaer Straße ist essentiell. Vom Brückenkopf zur Schule</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>11.09.2024 16:57</td>
+      <td>11.09.2024 16:58</td>
+      <td>1,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>0,30</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>1 (unwichtig)</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>11.09.2024 17:30</td>
+      <td>11.09.2024 17:33</td>
+      <td>3,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>19,00</td>
+      <td>Radebeul</td>
+      <td>13,676799</td>
+      <td>51,099976</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Zeit/ Zeitersparnis;Tagesablauf;Bequemlichkeit;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>11.09.2024 18:38</td>
+      <td>11.09.2024 18:40</td>
+      <td>2,0</td>
+      <td>JG 3-4;JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>11.09.2024 19:04</td>
+      <td>11.09.2024 19:08</td>
+      <td>4,0</td>
+      <td>JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>Die Baustelle auf dem Weg zur Schule unten an der Schule nervt mich.</td>
+      <td>Victoria Weiße</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>11.09.2024 20:01</td>
+      <td>11.09.2024 20:11</td>
+      <td>10,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>9,00</td>
+      <td>Käbschütztal, Stroischen</td>
+      <td>13,388612</td>
+      <td>51,151412</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;</td>
+      <td>3</td>
+      <td>Fahrrad;Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>11.09.2024 20:12</td>
+      <td>11.09.2024 20:14</td>
+      <td>2,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>15,00</td>
+      <td>COSWIG</td>
+      <td>13,578398</td>
+      <td>51,126731</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>11.09.2024 20:43</td>
+      <td>11.09.2024 20:47</td>
+      <td>4,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>6,00</td>
+      <td>Diera-Zehren</td>
+      <td>13,423308</td>
+      <td>51,210001</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>3</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>11.09.2024 20:50</td>
+      <td>11.09.2024 21:02</td>
+      <td>12,0</td>
+      <td>JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Großdobritz</td>
+      <td>13,568360</td>
+      <td>51,216340</td>
+      <td>Ja</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Zeit/ Zeitersparnis;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Möglichkeit, Fahrgemeinschaften zu bilden;</td>
+      <td>4</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>Elisabeth Jüschke</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>11.09.2024 21:37</td>
+      <td>11.09.2024 21:39</td>
+      <td>2,0</td>
+      <td>JG 1-2;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>0,80</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Hutterer</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>11.09.2024 22:38</td>
+      <td>11.09.2024 22:40</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>12.09.2024 06:31</td>
+      <td>12.09.2024 06:34</td>
+      <td>3,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>12.09.2024 06:53</td>
+      <td>12.09.2024 06:57</td>
+      <td>4,0</td>
+      <td>JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>16,00</td>
+      <td>Klipphausen</td>
+      <td>13,529355</td>
+      <td>51,074957</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Möglichkeit, mehrere eigene Kinder zu fahren;Bequemlichkeit;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>12.09.2024 07:12</td>
+      <td>12.09.2024 07:18</td>
+      <td>6,0</td>
+      <td>JG 1-2;JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>10,00</td>
+      <td>Gauernitz</td>
+      <td>13,555821</td>
+      <td>51,113991</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Verfügbarkeit von Alternativen;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Fahrrad;</td>
+      <td>Unter "sozialer Zusammenhalt" konnte ich mir leider nichts vorstellen und habe die Felder daher freigelassen.</td>
+      <td>Matthias Vorhauer</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>12.09.2024 07:37</td>
+      <td>12.09.2024 07:42</td>
+      <td>5,0</td>
+      <td>JG 5-6;Klasse 7-10;Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>11,00</td>
+      <td>Constappel</td>
+      <td>13,564806</td>
+      <td>51,105578</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>4</td>
+      <td>Fahrrad;</td>
+      <td>1-2 Tage pro Woche fahren die Kinder mit im Auto auf dem Arbeitsweg. 3-4 Tage mit Bus. Wir denken über Kauf eines E-Bikes nach. Dann würden es noch mehr Bustage werden.</td>
+      <td>Aaron Fürmetz</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>12.09.2024 10:11</td>
+      <td>12.09.2024 10:15</td>
+      <td>4,0</td>
+      <td>JG 3-4;JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Bequemlichkeit;</td>
+      <td>1 (unwichtig)</td>
+      <td>Fahrrad;Zu Fuß;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>12.09.2024 10:30</td>
+      <td>12.09.2024 10:33</td>
+      <td>3,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>25,00</td>
+      <td>Tanneberg</td>
+      <td>13,411926</td>
+      <td>51,050990</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>12.09.2024 12:20</td>
+      <td>12.09.2024 12:24</td>
+      <td>4,0</td>
+      <td>JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>17,00</td>
+      <td>Schwochau</td>
+      <td>13,292303</td>
+      <td>51,182993</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>12.09.2024 15:08</td>
+      <td>12.09.2024 15:13</td>
+      <td>5,0</td>
+      <td>JG 3-4;JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>15,00</td>
+      <td>Cossebaude</td>
+      <td>13,629838</td>
+      <td>51,087612</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Unzufrieden</td>
+      <td>-</td>
+      <td>Sehr unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>12.09.2024 20:02</td>
+      <td>12.09.2024 20:14</td>
+      <td>12,0</td>
+      <td>JG 1-2;JG 5-6;Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>15,00</td>
+      <td>Coswig</td>
+      <td>13,578398</td>
+      <td>51,126731</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>Ein großes Problem ist, das der Fußweg im Bereich der Schule in den Komm- und Abholzeiten zugeparkt ist. Zusätzlich besteht Parkverbot!\nDas ist nicht nur ein Verstoß gegen die STVO, sondern hochgradig gefährlich und egoistisch. Wenn ich Eltern daraufhin anspreche, dass Kinder nicht über ihr Auto drüber schauen können, das sie nicht vorbei kommen usw. wird das zwar kommentiert: "Ja, ich weiß, die Parksituation ist halt schwierig usw." Aber sie bleiben stehen und gehen schnell weg. \nIch bin da echt sauer. Alle Eltern wollen einen sicheren Weg für ihr Kind. Wir laufen auch vom Bahnhof zur Schule und müssen dafür Zeit einplanen. Offensichtlich besteht dieses Problem schon lange. Warum wird es ignoriert?\nEine Anregung für das Jahresmotto wäre es auch...\nWer sich klimafreundlich zur Schule bewegt, muss auf dem Fußweg sicher laufen können!!!\nWäre ein Zebrastreifen ab der Schule eine zusätzliche Möglichkeit?</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>13.09.2024 07:24</td>
+      <td>13.09.2024 07:29</td>
+      <td>5,0</td>
+      <td>JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>15,00</td>
+      <td>Taubenheim (Klipphausen)</td>
+      <td>13,461932</td>
+      <td>51,094853</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Tagesablauf;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>Problem beim ÖPNV ist die Taktung. Der Bus fährt zu selten.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>13.09.2024 09:56</td>
+      <td>13.09.2024 10:12</td>
+      <td>16,0</td>
+      <td>JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>9,00</td>
+      <td>Naustadt</td>
+      <td>13,510068</td>
+      <td>51,113080</td>
+      <td>Nein</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>Die Kinder steigen früh an der Bahnhofstraße aus. Dort finde ich die Straßenüberquerung nicht wirklich sicher, da die Straße sehr breit ist und viel Verkehr herrscht. Vor allem in der dunklen Jahreszeit und bei Regen hat man dort bei einer Straßenüberquerung ein mulmiges Gefühl.\nMit einer Insel in der Mitte der Straße vielleicht sogar noch im Zusammenhang mit einem Zebrastreifen wäre dort viel getan.\nIch wundere mich sehr, dass die Stadt dort nicht schon lange etwas geändert hat. Schon zu meiner Schulzeit vor 20 Jahren, war diese Stelle meines Erachtens ein Problem. Man könnte natürlich bis zum Busbahnhof fahren, aber die meisten Schüler (auch des Franziskaneums) steigen an der Bahnhofstraße aus, da der Weg einfach kürzer ist.\nDen meisten Schutz für den Einzelnen bildet dann einfach die Menge der Schüler, die dort über die Straße strömen..</td>
+      <td>Henriette Preuß</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>13.09.2024 12:16</td>
+      <td>13.09.2024 12:19</td>
+      <td>3,0</td>
+      <td>Gymnasium;</td>
+      <td>zwei Wohnorte</td>
+      <td>22,00</td>
+      <td>Radebeul</td>
+      <td>13,676799</td>
+      <td>51,099976</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>13.09.2024 18:05</td>
+      <td>13.09.2024 18:11</td>
+      <td>6,0</td>
+      <td>JG 1-2;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>Separate Radwege, viel mehr Fussübergangstreifen, Tempo-Reduzierung in Innenstädten</td>
+      <td>Mirko</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>13.09.2024 20:40</td>
+      <td>13.09.2024 20:46</td>
+      <td>6,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>18,00</td>
+      <td>Hkggvkll</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Bequemlichkeit;</td>
+      <td>1 (unwichtig)</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>Bei dem Stundenplanausfall und den Umplanungen ist man ohne Auto „auf verlorenem Posten“, von Schülern wird ja verlangt mit dem Auto zum Schwimmen oder nach Rossendorf zu fahren. 🤷🏼‍♀️</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>14.09.2024 15:28</td>
+      <td>14.09.2024 15:32</td>
+      <td>4,0</td>
+      <td>JG 3-4;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>11,00</td>
+      <td>Großdobritz</td>
+      <td>13,568360</td>
+      <td>51,216340</td>
+      <td>Nein</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Fehlende oder unsichere Radwege;Verfügbarkeit von Alternativen;Zeit/ Zeitersparnis;Fehlende oder schlechte Verbindung mit Bus/ Bahn;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, Fahrgemeinschaften zu bilden;Bequemlichkeit;</td>
+      <td>2</td>
+      <td>Ich bilde eine Fahrgemeinschaft mit anderen;Ich kann mir keinen Umstieg vorstellen.;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>14.09.2024 17:40</td>
+      <td>14.09.2024 17:41</td>
+      <td>1,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>8,00</td>
+      <td>Triebischtal</td>
+      <td>13,459131</td>
+      <td>51,148636</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+      <td>Fahrrad;Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>15.09.2024 11:22</td>
+      <td>15.09.2024 11:26</td>
+      <td>4,0</td>
+      <td>JG 5-6;</td>
+      <td>zwei Wohnorte</td>
+      <td>8,00</td>
+      <td>Weinböhla</td>
+      <td>13,564353</td>
+      <td>51,161894</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>2</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Nur einfache Fahrt mit dem Auto, Rückweg mit ÖPNV</td>
+      <td>Philipp</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>16.09.2024 05:15</td>
+      <td>16.09.2024 05:21</td>
+      <td>6,0</td>
+      <td>JG 3-4;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>13,00</td>
+      <td>Steinbach (Moritzburg)</td>
+      <td>13,625190</td>
+      <td>51,201147</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Zeit/ Zeitersparnis;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>3</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>16.09.2024 12:20</td>
+      <td>16.09.2024 12:22</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,10</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>3</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>17.09.2024 13:22</td>
+      <td>17.09.2024 13:25</td>
+      <td>3,0</td>
+      <td>Gymnasium;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>20,00</td>
+      <td>Churschütz</td>
+      <td>13,244927</td>
+      <td>51,174130</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Bequemlichkeit;</td>
+      <td>2</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>17.09.2024 23:25</td>
+      <td>17.09.2024 23:27</td>
+      <td>2,0</td>
+      <td>JG 1-2;JG 3-4;JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>20,00</td>
+      <td>Moritzburg</td>
+      <td>13,681941</td>
+      <td>51,159202</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Zeit/ Zeitersparnis;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Möglichkeit, Fahrgemeinschaften zu bilden;</td>
+      <td>4</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Fahrrad;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>18.09.2024 11:05</td>
+      <td>18.09.2024 11:08</td>
+      <td>3,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>4,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder unsichere Radwege;</td>
+      <td>3</td>
+      <td>Zu Fuß;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td>18.09.2024 11:10</td>
+      <td>18.09.2024 11:13</td>
+      <td>3,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>0,28</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>3</td>
+      <td>Zu Fuß;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>Julia und Götz mit Leonore SG4</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>18.09.2024 11:13</td>
+      <td>18.09.2024 11:21</td>
+      <td>8,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>9,00</td>
+      <td>Pegenau (Klipphausen)</td>
+      <td>13,531033</td>
+      <td>51,116407</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Ich bilde eine Fahrgemeinschaft mit anderen;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Buspaten für die Grundschule, damit das Busfahren keine Angst macht</td>
+      <td>Julia Troch</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>18.09.2024 11:21</td>
+      <td>18.09.2024 11:23</td>
+      <td>2,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>9,00</td>
+      <td>Pegenau (Klipphausen)</td>
+      <td>13,531033</td>
+      <td>51,116407</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>Julia Troch</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td>18.09.2024 11:27</td>
+      <td>18.09.2024 11:29</td>
+      <td>2,0</td>
+      <td>JG 1-2;JG 3-4;JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>20,00</td>
+      <td>Moritzburg</td>
+      <td>13,681941</td>
+      <td>51,159202</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Möglichkeit, mehrere eigene Kinder zu fahren;Fehlende oder unsichere Radwege;</td>
+      <td>4</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>18.09.2024 11:20</td>
+      <td>18.09.2024 11:32</td>
+      <td>12,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Gauernitz</td>
+      <td>13,555821</td>
+      <td>51,113991</td>
+      <td>Ja</td>
+      <td>Sehr zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Tagesablauf;Fehlende oder schlechte Verbindung mit Bus/ Bahn;</td>
+      <td>4</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Unsere Kinder (1. und 4. Klasse) fahren meist mit dem Bus, Autofahren findet besonders dann statt wenn sie nicht gemeinsam fahren können, unser 1.-Klässler soll noch nicht alleine Bus fahren. Beim "Bus-fahren-üben" zu Beginn des Schuljahres ist mir aufgefallen dass die Einmündung der Hafenstraße in die Zscheilaer Straße wenn man zu Fuß die Zscheilaer Straße geht ein unangenehmer Gefahrenpunkt ist, wenn man von oben kommt weil die Autos durch die Mauer Fußgänger erst sehr spät sehen und beidseitig weil einem Großteil der Autofahrer die aus der Uferstraße kommen nicht bewusst ist dass die Fußgänger Vorfahrt haben. Geht man als Erwachsener dort selbstbewusst über die Straße halten die Autos natürlich an aber wenn man sich etwas vorsichtiger bewegt fahren sie alle einfach durch, letztens 5 Autos in Folge (einschließlich Lehrpersonal der Schule) bevor wir von einem Auto durchgelassen wurden. Eventuell könnte dort ein Warnschild oder ein Zebrastreifen den Autofahrern verdeutlichen was sie gemäß StVO dort zwar sowieso beachten müssten aber anscheinend nicht wissen.</td>
+      <td>Martin Koch, Papa von Emilia und Fernando SG 4</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td>18.09.2024 11:31</td>
+      <td>18.09.2024 11:32</td>
+      <td>1,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Gauernitz</td>
+      <td>13,555821</td>
+      <td>51,113991</td>
+      <td>Ja</td>
+      <td>Sehr zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Tagesablauf;</td>
+      <td>4</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>18.09.2024 12:39</td>
+      <td>18.09.2024 12:53</td>
+      <td>14,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>10,00</td>
+      <td>Nimtitz</td>
+      <td>13,378598</td>
+      <td>51,164002</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, Fahrgemeinschaften zu bilden;</td>
+      <td>3</td>
+      <td>-</td>
+      <td>Die von vielen Schülern genutzte Haltestelle "Bahnhofstraße" sollte einen Fußgängerüberweg (beleuchteten Zebrastreifen) bekommen. Auch die Stadt Meißen sollte sich klima- und fußgängerfreundlich weiterentwickeln.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td>18.09.2024 12:47</td>
+      <td>18.09.2024 13:00</td>
+      <td>13,0</td>
+      <td>JG 5-6;JG 1-2;JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,40</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Tagesablauf;</td>
+      <td>4</td>
+      <td>-</td>
+      <td>Parksituation morgens vor der Schule - wenn es keinen freien Parkplatz vor der Schule gibt, wird von machen Eltern die ganze Kreuzung davor zugestellt, anstatt die Kinder ein paar Meter laufen zu lassen. Daran müsste dringend was geändert werden.\nZum größten Teil bewältigen Sie ihren Schulweg per Fahrrad oder Bus und nutzen dafür den Fußweg vom Busbahnhof Richtung Gymnasium.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td>18.09.2024 13:17</td>
+      <td>18.09.2024 13:29</td>
+      <td>12,0</td>
+      <td>JG 3-4;</td>
+      <td>zwei Wohnorte</td>
+      <td>3,30</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Möglichkeit, mehrere eigene Kinder zu fahren;Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Tagesablauf;</td>
+      <td>3</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Das Meißner Radwegnetz ist eine Katastrophe! Vor allem für Kinder.... auch allgemein betrachtet, ist die Verkehrsführung in Meißen schlecht organisiert, finden wir. Hoffentlich gibt es dahingehend irgendwann eine Veränderung!</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td>18.09.2024 14:30</td>
+      <td>18.09.2024 14:32</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>0,80</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>68</td>
+      <td>18.09.2024 14:52</td>
+      <td>18.09.2024 14:56</td>
+      <td>4,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Krögis (Käbschütztal)</td>
+      <td>13,379795</td>
+      <td>51,120474</td>
+      <td>Ja</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Möglichkeit, mehrere eigene Kinder zu fahren;Möglichkeit, Fahrgemeinschaften zu bilden;Fehlende oder schlechte Verbindung mit Bus/ Bahn;Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>4</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>Jana Schwenzien</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>18.09.2024 17:56</td>
+      <td>18.09.2024 17:58</td>
+      <td>2,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>47,00</td>
+      <td>Dresden</td>
+      <td>13,738144</td>
+      <td>51,049329</td>
+      <td>Ja</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>3</td>
+      <td>Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>18.09.2024 19:33</td>
+      <td>18.09.2024 19:36</td>
+      <td>3,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>4,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zeit/ Zeitersparnis;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>71</td>
+      <td>18.09.2024 12:52</td>
+      <td>18.09.2024 20:20</td>
+      <td>448,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Tagesablauf;</td>
+      <td>3</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Zu Fuß;</td>
+      <td>Lediglich am Montag Nachmittag nutzen wir das Auto zum Abholen aus der Schule (aus Tagesablaufgründen). Montag Morgen sowie dienstags bis freitags nutzen wir entweder den ÖPNV, das Rad oder bewältigen den Schul-/Heimweg zu Fuß (meistens morgens per ÖPNV, nachmittags zu Fuß).</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td>18.09.2024 21:53</td>
+      <td>18.09.2024 21:58</td>
+      <td>5,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,70</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Tagesablauf;</td>
+      <td>3</td>
+      <td>Fahrrad;</td>
+      <td>Ich fahre mein Kind täglich mit dem Lastenrad, wir sind aber Jahrgang 1, somit fehlt uns die Wintererfahrung. Da würde ich dann im Falle von viel Schnee wahrscheinlich laufen oder Schlitten fahren.\nAuto nur im äußersten Notfall.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>73</td>
+      <td>18.09.2024 22:02</td>
+      <td>18.09.2024 22:04</td>
+      <td>2,0</td>
+      <td>JG 3-4;JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ja</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Bequemlichkeit;</td>
+      <td>2</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Zu Fuß;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>74</td>
+      <td>19.09.2024 08:50</td>
+      <td>19.09.2024 08:54</td>
+      <td>4,0</td>
+      <td>JG 3-4;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>8,00</td>
+      <td>Pröda/Käbschütztal</td>
+      <td>13,387984</td>
+      <td>51,176340</td>
+      <td>Nein</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Das Verhalten der Busfahrer Grenzt an Kindeswohlgefährdung. VGM reagiert nicht auf Beschwerden!</td>
+      <td>Wilhelm Hahn</td>
+    </tr>
+    <tr>
+      <td>75</td>
+      <td>19.09.2024 09:09</td>
+      <td>19.09.2024 09:17</td>
+      <td>8,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>11,00</td>
+      <td>Weinböhla</td>
+      <td>13,564353</td>
+      <td>51,161894</td>
+      <td>Ja</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, Fahrgemeinschaften zu bilden;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>Jüpner Tilo</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td>19.09.2024 09:25</td>
+      <td>19.09.2024 09:28</td>
+      <td>3,0</td>
+      <td>JG 3-4;JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>7,40</td>
+      <td>Kleinzadel</td>
+      <td>13,410459</td>
+      <td>51,207730</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>2</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>Hans-Christoph v. Zahn</td>
+    </tr>
+    <tr>
+      <td>77</td>
+      <td>19.09.2024 11:27</td>
+      <td>19.09.2024 11:30</td>
+      <td>3,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,50</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Zu Fuß;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>78</td>
+      <td>19.09.2024 11:21</td>
+      <td>19.09.2024 11:31</td>
+      <td>10,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;</td>
+      <td>3</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Zu Fuß;Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td>19.09.2024 23:14</td>
+      <td>19.09.2024 23:24</td>
+      <td>10,0</td>
+      <td>JG 1-2;JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>26,00</td>
+      <td>Dresden</td>
+      <td>13,738144</td>
+      <td>51,049329</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;</td>
+      <td>3</td>
+      <td>Fahrrad;Zu Fuß;Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>Auf dem Weg zur Schule - ein wunderbarer Film über Schulwege in anderen Ländern der Erde: \nIch könnte mir vorstellen als Challenge zum nächsten Klimaschultag mit dem Rad oder zu Fuß zur Schule zu kommen.</td>
+      <td>Teresa Eißmann</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>20.09.2024 09:40</td>
+      <td>20.09.2024 09:49</td>
+      <td>9,0</td>
+      <td>JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,50</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;Zeit/ Zeitersparnis;</td>
+      <td>2</td>
+      <td>Zu Fuß;Fahrrad;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td>20.09.2024 10:06</td>
+      <td>20.09.2024 10:10</td>
+      <td>4,0</td>
+      <td>JG 3-4;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,50</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ja</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Bequemlichkeit;Tagesablauf;</td>
+      <td>3</td>
+      <td>Fahrrad;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>82</td>
+      <td>20.09.2024 14:13</td>
+      <td>20.09.2024 14:19</td>
+      <td>6,0</td>
+      <td>JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Klipphausen</td>
+      <td>13,529355</td>
+      <td>51,074957</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td>20.09.2024 08:39</td>
+      <td>22.09.2024 12:36</td>
+      <td>3117,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,40</td>
+      <td>Meißen Spaar</td>
+      <td>13,499210</td>
+      <td>51,149291</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;</td>
+      <td>4</td>
+      <td>-</td>
+      <td>Auto wird nur in Verbindung mit meinem Rollstuhl Ehemann benutzt. Sonst nutzen wir nur Bus, Fahrrad bzw Lastenfahrrad</td>
+      <td>Sandra Czurlok</td>
+    </tr>
+    <tr>
+      <td>84</td>
+      <td>22.09.2024 21:55</td>
+      <td>22.09.2024 22:01</td>
+      <td>6,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>9,00</td>
+      <td>Riemsdorf</td>
+      <td>13,482261</td>
+      <td>51,114362</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verfügbarkeit von Alternativen;Zeit/ Zeitersparnis;Tagesablauf;</td>
+      <td>4</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>Kind ist grade eingeschult und traut sich noch nicht allein Busfahren - schön wäre wenn mehrere Kinder zusammen fahren würden (egal ob ÖPNV oder Elterntaxi)</td>
+      <td>Cornelia und Hendrik</td>
+    </tr>
+    <tr>
+      <td>85</td>
+      <td>22.09.2024 22:07</td>
+      <td>22.09.2024 22:11</td>
+      <td>4,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,60</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>23.09.2024 06:49</td>
+      <td>23.09.2024 06:55</td>
+      <td>6,0</td>
+      <td>JG 3-4;JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>11,00</td>
+      <td>Coswig</td>
+      <td>13,578398</td>
+      <td>51,126731</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>87</td>
+      <td>23.09.2024 09:58</td>
+      <td>23.09.2024 10:25</td>
+      <td>27,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>20,00</td>
+      <td>Badersen</td>
+      <td>13,266249</td>
+      <td>51,148541</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Verfügbarkeit von Alternativen;Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Möglichkeit, Fahrgemeinschaften zu bilden;Bequemlichkeit;</td>
+      <td>3</td>
+      <td>Ich bilde eine Fahrgemeinschaft mit anderen;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>Philipp</td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td>23.09.2024 19:35</td>
+      <td>23.09.2024 19:37</td>
+      <td>2,0</td>
+      <td>JG 5-6;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>35,00</td>
+      <td>Dresden</td>
+      <td>13,738144</td>
+      <td>51,049329</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Bequemlichkeit;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Unzuverlässigkeit der S-Bahn bzw. SEV</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td>23.09.2024 21:40</td>
+      <td>23.09.2024 21:50</td>
+      <td>10,0</td>
+      <td>JG 1-2;Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,20</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ja</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, Fahrgemeinschaften zu bilden;Möglichkeit, mehrere eigene Kinder zu fahren;Bequemlichkeit;</td>
+      <td>3</td>
+      <td>Zu Fuß;</td>
+      <td>Die Kinder laufen in der Regel zur Schule. Bei Schlechtwetter werden sie gemeinsam mit Nachbarsschulkinder in einer Fahrgemeinschaft gefahren. Der Rückweg ist teilweise zu Fuß, mit dem Bus oder auch mit dem Auto in Verbindung mit dem Arbeitsweg.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>24.09.2024 19:22</td>
+      <td>24.09.2024 19:24</td>
+      <td>2,0</td>
+      <td>JG 1-2;JG 3-4;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zeit/ Zeitersparnis;</td>
+      <td>4</td>
+      <td>Fahrrad;</td>
+      <td>-</td>
+      <td>Dorothee Ronatschk</td>
+    </tr>
+    <tr>
+      <td>91</td>
+      <td>25.09.2024 20:47</td>
+      <td>25.09.2024 20:57</td>
+      <td>10,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>0,40</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Zu Fuß;</td>
+      <td>Unser Weg ist zwar nicht weit, aber leider entstehen Gefahren durch unbedachtes Halten  anderen Eltern auf den Fußwegen vor der Schule. Dadurch sind wir gezwungen oft direkt auf der Straße laufen zu müssen. Dies lässt uns beim Gedanken, unsere Kinder allein laufen zu lassen, zweifeln, ob deren Schulweg sicher genug ist.</td>
+      <td>Andreas Bielig/ Sarah Glaser mit Karl &amp; Frieda</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td>26.09.2024 17:15</td>
+      <td>26.09.2024 17:17</td>
+      <td>2,0</td>
+      <td>JG 3-4;JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>93</td>
+      <td>26.09.2024 17:15</td>
+      <td>26.09.2024 17:17</td>
+      <td>2,0</td>
+      <td>JG 3-4;JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>94</td>
+      <td>28.09.2024 07:26</td>
+      <td>28.09.2024 07:28</td>
+      <td>2,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>11,00</td>
+      <td>Coswig</td>
+      <td>13,578398</td>
+      <td>51,126731</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;</td>
+      <td>2</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>95</td>
+      <td>30.09.2024 21:54</td>
+      <td>30.09.2024 21:59</td>
+      <td>5,0</td>
+      <td>JG 3-4;JG 5-6;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>11,00</td>
+      <td>Taubenheim (Klipphausen)</td>
+      <td>13,461932</td>
+      <td>51,094853</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Verfügbarkeit von Alternativen;Zeit/ Zeitersparnis;Möglichkeit, mehrere eigene Kinder zu fahren;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>Thomas Feldt</td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td>01.10.2024 09:03</td>
+      <td>01.10.2024 09:05</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>15,00</td>
+      <td>Jessen (Niederau)</td>
+      <td>13,529888</td>
+      <td>51,208013</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1 (unwichtig)</td>
+      <td>Ich kann mir keinen Umstieg vorstellen.;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>97</td>
+      <td>01.10.2024 09:12</td>
+      <td>01.10.2024 09:17</td>
+      <td>5,0</td>
+      <td>JG 1-2;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>0,90</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Niklas SG 1</td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td>01.10.2024 11:35</td>
+      <td>01.10.2024 11:37</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;</td>
+      <td>zwei Wohnorte</td>
+      <td>1,80</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>Zu Fuß;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td>01.10.2024 11:35</td>
+      <td>01.10.2024 11:38</td>
+      <td>3,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,60</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>Nix</td>
+      <td>Moritz Goerke</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>01.10.2024 11:36</td>
+      <td>01.10.2024 11:38</td>
+      <td>2,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>4,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;</td>
+      <td>4</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>01.10.2024 11:36</td>
+      <td>01.10.2024 11:39</td>
+      <td>3,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>9,10</td>
+      <td>Coswig</td>
+      <td>13,578398</td>
+      <td>51,126731</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Lilly Charlotte Baumann</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>01.10.2024 11:40</td>
+      <td>01.10.2024 11:45</td>
+      <td>5,0</td>
+      <td>Klasse 7-10;</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Großdobritz</td>
+      <td>13,568360</td>
+      <td>51,216340</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Zeit/ Zeitersparnis;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Möglichkeit, Fahrgemeinschaften zu bilden;</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen;</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td>01.10.2024 11:52</td>
+      <td>01.10.2024 12:06</td>
+      <td>14,0</td>
+      <td>JG 1-2</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>15,00</td>
+      <td>Coswig</td>
+      <td>13,578398</td>
+      <td>51,126731</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>Ein großes Problem ist die Parksituation vor der Schule. In den Hol-und Bringzeiten stehen immer Autos auf dem (nur durch Markierung) abgetrennten Fußweg und im Halteverbot. Oft stehen die Autos sogar so auf dem Fußweg, dass man auf die Straße ausweichen muss. Unsere Tochter in der 1. Klasse soll mit uns üben, Schritt für Schritt den Weg von der S-Bahn bis zur Schule und zurück allein zu bewältigen.\nSie kann weder über die parkenden Autos (auch oft Kleinbusse!) drüberschauen, noch sicher an ihnen vorbeilaufen.\nGemeint ist der Fußweg direkt gegenüber der Schule.\nKLimaschule? Wer klimafreundlich kommt und einen längeren Weg in Kauf nimmt, lebt (zumindest als Grundschüler) gefährlich.\nWenn ich Eltern, die wie oben beschrieben parken, anspreche, stimmen sie mir zwar zu, verweisen jedoch auf die schlechte Parksituation, dass sie jetzt aber schnell zur Arbeit müssen usw.\nAm nächsten Tag ist der Fußweg wieder zugeparkt.\nMein Eindruck ist:\nSTVO? egal-Hauptsache ich und meine Kinder kommen sicher zur Schule\nEs muss schnell gehen, einen Parkplatz mit Entfernung zur Schule nehmen wird nicht in Erwägung gezogen\nIch kann nicht verstehen, warum viele Eltern das so trennen. Immer freundlicher Umgang und alle duzen sich usw., aber hier herrscht der pure Egoismus!\n\nWir haben kein Auto und fahren Bus und Bahn, laufen von der Haltestelle und zurück und nehmen dafür auch in Kauf, mehr Zeit zu benötigen.\n\nIch habe bereits einen Fragebogen ausgefüllt bei der Umfrage der Oberschule und mich dort ähnlich geäußert.</td>
+      <td>Eva-Maria Nicolaus</td>
+    </tr>
+    <tr>
+      <td>104</td>
+      <td>01.10.2024 21:16</td>
+      <td>01.10.2024 21:18</td>
+      <td>2,0</td>
+      <td>Klasse 7-10</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>105</td>
+      <td>04.10.2024 12:36</td>
+      <td>04.10.2024 12:39</td>
+      <td>3,0</td>
+      <td>JG 1-2</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Radebeul</td>
+      <td>13,676799</td>
+      <td>51,099976</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Fehlende oder unsichere Radwege</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen</td>
+      <td>Wenn meine Tochter älter ist wird und soll sie mit der Bahn fahren. Aktuell ist sie ganz am Anfang aber dafür noch etwas zu jung und zuviel los zu Beginn in der 1. Klasse.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>106</td>
+      <td>21.10.2024 09:28</td>
+      <td>21.10.2024 09:34</td>
+      <td>6,0</td>
+      <td>JG 3-4;JG 5-6</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Klipphausen</td>
+      <td>13,529355</td>
+      <td>51,074957</td>
+      <td>Ja</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zeit/ Zeitersparnis;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern</td>
+      <td>4</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Fahrrad</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>28.10.2024 22:07</td>
+      <td>28.10.2024 22:11</td>
+      <td>4,0</td>
+      <td>JG 1-2;JG 3-4</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Krögis</td>
+      <td>13,379795</td>
+      <td>51,120474</td>
+      <td>Ja</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Möglichkeit, Fahrgemeinschaften zu bilden</td>
+      <td>3</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn);Ich bilde eine Fahrgemeinschaft mit anderen</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>108</td>
+      <td>28.10.2024 22:13</td>
+      <td>28.10.2024 22:16</td>
+      <td>3,0</td>
+      <td>JG 3-4</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>3,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Verfügbarkeit von Alternativen;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn)</td>
+      <td>Die Taktung und die mangelhafte Zuverlässigkeit der S-Bahn nach Dresden ist der entscheidende Grund dafür, weshalb ich das Auto nutze.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td>29.10.2024 05:33</td>
+      <td>29.10.2024 05:39</td>
+      <td>6,0</td>
+      <td>JG 3-4</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,50</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>110</td>
+      <td>29.10.2024 05:40</td>
+      <td>29.10.2024 05:41</td>
+      <td>1,0</td>
+      <td>Klasse 7-10</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,50</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>29.10.2024 19:52</td>
+      <td>29.10.2024 19:56</td>
+      <td>4,0</td>
+      <td>JG 1-2</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>18,00</td>
+      <td>Großenhain</td>
+      <td>13,531715</td>
+      <td>51,291184</td>
+      <td>Ja</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Tagesablauf;Zeit/ Zeitersparnis;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Finanzielle Aspekte</td>
+      <td>4</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn)</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>112</td>
+      <td>30.10.2024 23:34</td>
+      <td>30.10.2024 23:37</td>
+      <td>3,0</td>
+      <td>JG 3-4;JG 5-6</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>12,00</td>
+      <td>Coswig</td>
+      <td>13,578398</td>
+      <td>51,126731</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn)</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>113</td>
+      <td>03.11.2024 16:51</td>
+      <td>03.11.2024 16:56</td>
+      <td>5,0</td>
+      <td>JG 3-4</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>16,00</td>
+      <td>Großenhain</td>
+      <td>13,531715</td>
+      <td>51,291184</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Philipp &amp; Anja Böhme</td>
+    </tr>
+    <tr>
+      <td>114</td>
+      <td>05.11.2024 12:04</td>
+      <td>05.11.2024 12:06</td>
+      <td>2,0</td>
+      <td>JG 1-2</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>2,20</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>115</td>
+      <td>05.11.2024 20:32</td>
+      <td>05.11.2024 20:34</td>
+      <td>2,0</td>
+      <td>JG 3-4</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>4,00</td>
+      <td>Niederjahna</td>
+      <td>13,434757</td>
+      <td>51,165840</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Miriam</td>
+    </tr>
+    <tr>
+      <td>116</td>
+      <td>20.11.2024 11:02</td>
+      <td>20.11.2024 11:54</td>
+      <td>52,0</td>
+      <td>JG 3-4</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>11,00</td>
+      <td>Taubenheim (Klipphausen)</td>
+      <td>13,461932</td>
+      <td>51,094853</td>
+      <td>Nein</td>
+      <td>Zufrieden</td>
+      <td>Sehr unzufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Möglichkeit, mehrere eigene Kinder zu fahren;Tagesablauf</td>
+      <td>4</td>
+      <td>Fahrrad;Öffentliche Verkehrsmittel (Bus, Bahn, Straßenbahn)</td>
+      <td>Der Fahrplan mit den ÖPNV ist ungünstig, um komplett auf den Bus umzusteigen. Vor allem am Morgen fährt der Bus für uns zu zeitig. Wenn Sachsens Schulen später beginnen würden (ich habe von entsprechenden Pläne dieses Jahr in der SZ gelesen) wäre eine Anpassung des Fahrplans wünschenswert. Aktuell sind die Kinder 7:10 Uhr in Meißen am Busbahnhof.\n\nAußerdem fehlt ein Radweg entlang der S177 zwischen Meißen und Wilsdruff. Der Bürgermeister Olaf Raschke hat wiederholt im Wahlkampf zur Bürgermeisterwahl das Versprechen gegeben, solch einen Radweg zu bauen. \n\nIn der Ortslage Taubenheim fehlt ein Fußweg um unteren Teil des Dorfes. Müssen die Kinder am Ortseingang Taubenheim aussteigen, weil einige Busse  von dort aus in Richtung Wilsdruff abbiegen, ist es vor allem in der dunklen Jahreszeit für die Kinder (und auch für alle anderen) viel zu gefährlich auf der schmalen und stark von LKWs befahrenen Hauptstraße zu laufen.</td>
+      <td>Thomas Feldt</td>
+    </tr>
+    <tr>
+      <td>117</td>
+      <td>20.11.2024 23:11</td>
+      <td>20.11.2024 23:21</td>
+      <td>10,0</td>
+      <td>JG 1-2;Klasse 7-10</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>1,00</td>
+      <td>Meißen</td>
+      <td>13,470494</td>
+      <td>51,163087</td>
+      <td>Nein</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Sehr zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Fehlende oder schlechte Verbindung mit Bus/ Bahn;Fehlende oder unsichere Radwege;Tagesablauf;Verbindung mit dem Arbeitsweg der Eltern;Möglichkeit, mehrere eigene Kinder zu fahren;Finanzielle Aspekte</td>
+      <td>3</td>
+      <td>Zu Fuß;Fahrrad</td>
+      <td>Wir nutzen eine Mischform zwischen Auto und zu Fuß gehen.\nDer Schulweg zwischen Altstadtbrücke und Schule ist morgens häufig sehr unsicher durch z.B.: \n- zu schnell fahrende Autos, \n- Müllautos, \n- Ausladesituationen von Firmen, die die Straße blockieren und andere PKW dazu veranlassen über den Bürgersteig zu fahren, \n- Parken von Fahrzeugen in 2. Reihe, um die Kinder 'abzuwerfen',\n- fehlender Radweg,\n- einziger Zufahrsweg zu den Schulen auf dem Crassoberg.</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>118</td>
+      <td>21.11.2024 20:44</td>
+      <td>21.11.2024 20:52</td>
+      <td>8,0</td>
+      <td>JG 1-2</td>
+      <td>Ich habe einen Wohnort</td>
+      <td>9,50</td>
+      <td>Gauernitz</td>
+      <td>13,555821</td>
+      <td>51,113991</td>
+      <td>Ich fahre nicht mit dem Auto zur Schule</td>
+      <td>Zufrieden</td>
+      <td>Unzufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>Zufrieden</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+        </body>
+        </html>
+        
