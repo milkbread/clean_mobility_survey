@@ -36,6 +36,7 @@ location_to_clean = [
     ("großdobritz", "Großdobritz"),
     ("Bahra gemeinde hirschstein", "Bahra Hirschstein"),
     ("An der Telle Meißen", "Meißen"),
+    ("Diera-Zehren, OT Kleinzadel", "Kleinzadel"),
 ]
 
 def capitalize_first_letter(word):
@@ -118,7 +119,8 @@ class Cleaning:
         for index, row in self.df.iterrows():
             try:
 
-                self.df.at[index, "Alter"] = self.clean_age(row)
+                if 'Alter' in self.df.columns:
+                    self.df.at[index, "Alter"] = self.clean_age(row)
                 self.df.at[index, "Schulweg (in km)"] = self.clean_distance(row)
                 self.df.at[index, "Wohnort"] = self.clean_location(row, index)
 
@@ -172,12 +174,15 @@ class Cleaning:
             elif "In welchem Ort wohnst Du?" == col:
                 self.df.rename(columns={col: "Wohnort"}, inplace=True)
             elif (
-                "Wie lang ist Dein Weg zur Schule (einfache Strecke) in Kilometern?"
-                == col
+                col in ["Wie lang ist Dein Weg zur Schule (einfache Strecke) in Kilometern?", "Wie lang ist der Weg zur Schule (einfache Strecke) in Kilometern?"]
             ):
                 self.df.rename(columns={col: "Schulweg (in km)"}, inplace=True)
             elif "Wie alt bist Du?" == col:
                 self.df.rename(columns={col: "Alter"}, inplace=True)
+            elif "In welchem Alter ist/ sind Dein Kind/ Deine Kinder" == col:
+                self.df.rename(columns={col: "Alter des Kindes"}, inplace=True)
+            elif "Bildest Du Fahrgemeinschaften, wenn Du mit dem Auto zur Schule kommst?" == col:
+                self.df.rename(columns={col: "Fahrgemeinschaften"}, inplace=True)
 
     def add_duration(self):
         # Spalte "Dauer (in min)" hinzufügen, wenn nicht vorhanden
@@ -233,6 +238,7 @@ class Cleaning:
         distance_ = str(row["Schulweg (in km)"])
         _distance = distance_
         _distance = _distance.strip()
+        _distance = _distance.replace("etwa 15 km", "15")
         _distance = _distance.lower().strip("km").replace("km", "")
         _distance = _distance.lower().strip("meter")
         _distance = _distance.lower().strip("  (luftlinie)")
