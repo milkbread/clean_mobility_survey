@@ -11,64 +11,141 @@
 <body>
     <div class="container mt-5">
         <h1 class="text-center">FWS Mobilitätsumfrage</h1>
-        <p class="text-center">Wählen Sie eine der folgenden Optionen:</p>
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Karte</h5>
-                        <p class="card-text">Karte der Wohnorte.</p>
-                        <p class="card-text">
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
 
-                            <a href="map.html" class="btn btn-primary">Zur Karte</a>
-                        </p>
-                        <p class="card-text"><i>Die optionale "Clusterung" basiert rein auf der Nähe der
-                                Markierungspunkte und stellt keine wirkliche regionale Clusterung dar!</i></p>
+                <h3 class="text-center">Schüler</h3>
+                <p class="text-center">Wählen Sie eine der folgenden Optionen:</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="card lg-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Karte</h5>
+                                <p class="card-text">Karte der Wohnorte.</p>
+                                <p class="card-text">
+
+                                    <a href="map-pupils.html" class="btn btn-primary">Zur Karte</a>
+                                </p>
+                                <p class="card-text"><i>Die optionale "Clusterung" basiert rein auf der Nähe der
+                                        Markierungspunkte und stellt keine wirkliche regionale Clusterung dar!</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card lg-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Tabelle</h5>
+                                <p class="card-text">Gereinigte Daten als Tabelle.</p>
+                                <a href="table-pupils.html" class="btn btn-primary">Zur Tabelle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="card lg-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Download GeoJSON</h5>
+                                <a href="coordinates-pupils.geojson" class="btn btn-secondary"
+                                    download="FWS_Mobilitaetsumfrage_Koordinaten_Wohnorte.geojson">Download GeoJSON</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card lg-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Download CSV</h5>
+                                <a href="cleaned_data-pupils.csv" class="btn btn-secondary"
+                                    download="FWS_Mobilitaetsumfrage_Daten_Schueler_bereinigt.csv">Download CSV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <h1 class="text-center">Wordcloud der Anmerkungen</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card lg-4">
+                                <div class="card-body text-center">
+                                    <a href="wordcloud-pupils.png">
+                                        <img src="wordcloud-pupils.png" alt="Wordcloud" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Tabelle</h5>
-                        <p class="card-text">Gereinigte Daten als Tabelle.</p>
-                        <a href="table.html" class="btn btn-primary">Zur Tabelle</a>
+            <div class="col-lg-6">
+
+                <h3 class="text-center">Eltern</h3>
+                <p class="text-center">Wählen Sie eine der folgenden Optionen:</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="card lg-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Karte</h5>
+                                <p class="card-text">Karte der Wohnorte.</p>
+                                <p class="card-text">
+
+                                    <a href="map-parents.html" class="btn btn-primary">Zur Karte</a>
+                                </p>
+                                <p class="card-text"><i>Die optionale "Clusterung" basiert rein auf der Nähe der
+                                        Markierungspunkte und stellt keine wirkliche regionale Clusterung dar!</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card lg-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Tabelle</h5>
+                                <p class="card-text">Gereinigte Daten als Tabelle.</p>
+                                <a href="table-parents.html" class="btn btn-primary">Zur Tabelle</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Download GeoJSON</h5>
-                        <a href="coordinates.geojson" class="btn btn-secondary"
-                            download="FWS_Mobilitaetsumfrage_Koordinaten_Wohnorte.geojson">Download GeoJSON</a>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="card lg-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Download GeoJSON</h5>
+                                <a href="coordinates-parents.geojson" class="btn btn-secondary"
+                                    download="FWS_Mobilitaetsumfrage_Koordinaten_Wohnorte.geojson">Download GeoJSON</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card lg-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Download CSV</h5>
+                                <a href="cleaned_data-parents.csv" class="btn btn-secondary"
+                                    download="FWS_Mobilitaetsumfrage_Daten_Eltern_bereinigt.csv">Download CSV</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Download CSV</h5>
-                        <a href="cleaned_data.csv" class="btn btn-secondary"
-                            download="FWS_Mobilitaetsumfrage_Daten_bereinigt.csv">Download CSV</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <h1 class="text-center">Wordcloud der Anmerkungen</h1>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card mb-4">
-                        <div class="card-body text-center">
-                            <img src="wordcloud.png" alt="Wordcloud" class="img-fluid">
+                <div class="row text-center">
+                    <h1 class="text-center">Wordcloud der Anmerkungen</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card lg-4">
+                                <div class="card-body text-center">
+                                    <a href="wordcloud-parents.png">
+                                        <img src="wordcloud-parents.png" alt="Wordcloud" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container mt-5">
         <div class="row text-center">
             <div class="alert alert-light" role="alert">
                 <p>Der Quellcode ist hier zu finden:</p>
